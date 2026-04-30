@@ -1,0 +1,22 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+pubspec.lock
+
+# Build
+build/
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# Firebase / secrets
+google-services.json
+GoogleService-Info.plist
+firebase_config.dart
+
+# Logs
+*.log
+
+# System
+.DS_Store
+Thumbs.db
