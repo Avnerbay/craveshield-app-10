@@ -1,3 +1,6 @@
+import '../craveshield/screens/emergency_memory_screen.dart';
+import '../craveshield/screens/memory_vault_screen.dart';
+import '../craveshield/services/memory_vault_service.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -327,7 +330,34 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed(Photo1Widget.routeName);
+                                    final items = await MemoryVaultService
+                                        .instance
+                                        .loadItems();
+                                    if (!context.mounted) return;
+                                    if (items.isNotEmpty) {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute<void>(
+                                          builder: (_) =>
+                                              const EmergencyMemoryScreen(),
+                                        ),
+                                      );
+                                    } else {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        const SnackBar(
+                                          content: Text(
+                                            'Add memories to support you in difficult moments',
+                                          ),
+                                          duration: Duration(seconds: 3),
+                                        ),
+                                      );
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute<void>(
+                                          builder: (_) =>
+                                              const MemoryVaultScreen(),
+                                        ),
+                                      );
+                                    }
                                   },
                                   child: Material(
                                     color: Colors.transparent,
@@ -376,8 +406,37 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                 highlightColor:
                                                     Colors.transparent,
                                                 onTap: () async {
-                                                  context.pushNamed(
-                                                      Photo1Widget.routeName);
+                                                  final items =
+                                                      await MemoryVaultService
+                                                          .instance
+                                                          .loadItems();
+                                                  if (!context.mounted) return;
+                                                  if (items.isNotEmpty) {
+                                                    Navigator.of(context).push(
+                                                      MaterialPageRoute<void>(
+                                                        builder: (_) =>
+                                                            const EmergencyMemoryScreen(),
+                                                      ),
+                                                    );
+                                                  } else {
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      const SnackBar(
+                                                        content: Text(
+                                                          'Add memories to support you in difficult moments',
+                                                        ),
+                                                        duration: Duration(
+                                                            seconds: 3),
+                                                      ),
+                                                    );
+                                                    Navigator.of(context).push(
+                                                      MaterialPageRoute<void>(
+                                                        builder: (_) =>
+                                                            const MemoryVaultScreen(),
+                                                      ),
+                                                    );
+                                                  }
                                                 },
                                                 child: ClipRRect(
                                                   borderRadius:

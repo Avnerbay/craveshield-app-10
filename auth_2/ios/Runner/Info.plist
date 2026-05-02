@@ -75,6 +75,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>CraveShield needs access to your photos to save meaningful memories that support your recovery</string>
+	<key>NSCameraUsageDescription</key>
+	<string>CraveShield needs camera access to capture memories</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 

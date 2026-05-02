@@ -9,6 +9,9 @@ import 'craveshield/screens/dashboard_placeholder_screen.dart';
 import 'craveshield/screens/disclaimer_screen.dart';
 import 'craveshield/screens/home_screen.dart';
 import 'craveshield/screens/login_screen.dart';
+import 'craveshield/screens/my_breathing_screen.dart';
+import 'craveshield/screens/memory_vault_screen.dart';
+import 'craveshield/screens/my_games_screen.dart';
 import 'craveshield/screens/my_shield_screen.dart';
 import 'craveshield/screens/register_screen.dart';
 import 'craveshield/screens/splash_screen.dart';
@@ -87,6 +90,9 @@ class _MyAppState extends State<MyApp> {
         CraveLoginScreen.routePath: (context) => const CraveLoginScreen(),
         HomeScreen.routePath: (context) => const HomeScreen(),
         MyShieldScreen.routePath: (context) => const MyShieldScreen(),
+        MyBreathingScreen.routePath: (context) => const MyBreathingScreen(),
+        MyGamesScreen.routePath: (context) => const MyGamesScreen(),
+        MemoryVaultScreen.routePath: (context) => const MemoryVaultScreen(),
         '/crave-select-addiction': (context) => const QuitSelectionScreen(),
         CraveDashboardPlaceholderScreen.routePath: (context) =>
             const CraveDashboardPlaceholderScreen(),

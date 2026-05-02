@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'my_shield_screen.dart';
+import 'craveshield/screens/my_shield_screen.dart';
 
 /// Public name for the "What are you quitting today" screen.
 class WhatAreYouQuittingScreen extends StatefulWidget {
