@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white">
+  <!-- notebook body -->
+  <rect x="20" y="10" width="60" height="80" rx="6"/>
+  <!-- spiral rings -->
+  <circle cx="20" cy="28" r="5" fill="#0a2a5e"/>
+  <circle cx="20" cy="50" r="5" fill="#0a2a5e"/>
+  <circle cx="20" cy="72" r="5" fill="#0a2a5e"/>
+  <!-- lines -->
+  <rect x="32" y="45" width="35" height="4" rx="2" fill="#0a2a5e"/>
+  <rect x="32" y="55" width="28" height="4" rx="2" fill="#0a2a5e"/>
+  <rect x="32" y="65" width="32" height="4" rx="2" fill="#0a2a5e"/>
+  <!-- speech bubble -->
+  <rect x="30" y="14" width="40" height="26" rx="6" fill="#0a2a5e"/>
+  <path d="M42 40 L38 48 L50 40" fill="#0a2a5e"/>
+  <!-- quote marks -->
+  <text x="36" y="34" font-size="18" fill="white" font-family="serif">"</text>
+  <text x="52" y="34" font-size="18" fill="white" font-family="serif">"</text>
+</svg>

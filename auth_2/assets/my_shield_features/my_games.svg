@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3.5">
+  <!-- front face -->
+  <rect x="15" y="35" width="50" height="50" rx="3" fill="none"/>
+  <!-- top face -->
+  <path d="M15 35 L35 15 L85 15 L65 35 Z" fill="none"/>
+  <!-- right face -->
+  <path d="M65 35 L85 15 L85 65 L65 85 Z" fill="none"/>
+  <!-- front grid -->
+  <line x1="32" y1="35" x2="32" y2="85"/>
+  <line x1="48" y1="35" x2="48" y2="85"/>
+  <line x1="15" y1="52" x2="65" y2="52"/>
+  <line x1="15" y1="68" x2="65" y2="68"/>
+  <!-- top grid -->
+  <line x1="52" y1="15" x2="32" y2="35"/>
+  <line x1="68" y1="15" x2="48" y2="35"/>
+  <!-- right grid -->
+  <line x1="85" y1="32" x2="65" y2="52"/>
+  <line x1="85" y1="48" x2="65" y2="68"/>
+</svg>

@@ -60,7 +60,10 @@ dependencies:
   google_sign_in_platform_interface: 2.5.0
   google_sign_in_web: 0.12.4+4
   html: 0.15.6
+  image_gallery_saver: ^2.0.3
   image_picker: ^1.1.2
+  just_audio: ^0.9.36
+  just_audio_web: ^0.4.12
   intl: 0.20.2
   json_path: 0.7.2
   page_transition: 2.1.0
@@ -77,7 +80,9 @@ dependencies:
   pointer_interceptor_platform_interface: 0.10.0+1
   pointer_interceptor_web: 0.10.2+1
   provider: 6.1.5
+  http: ^1.4.0
   rxdart: 0.27.7
+  share_plus: ^12.0.2
   shared_preferences: 2.5.3
   shared_preferences_android: 2.4.10
   shared_preferences_foundation: 2.5.4
@@ -122,6 +127,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   flutter_svg: ^2.2.4
+  flutter_local_notifications: ^17.0.0
+  flutter_tts: ^4.0.0
 
 dependency_overrides:
   http: 1.4.0
@@ -135,13 +142,16 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/icons/
     - assets/images/
     - assets/images/my_shield_features/
+    - assets/icons/
     - assets/my_shield_features/
     - assets/logo/
+    - assets/fonts/
+    - assets/audio/
+    - assets/audio/sounds/
+    - assets/audio/music/
     - assets/videos/FAMILY.mp4
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -168,3 +178,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
+
+

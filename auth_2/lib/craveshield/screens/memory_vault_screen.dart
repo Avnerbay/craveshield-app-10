@@ -209,16 +209,15 @@ class _MemoryVaultScreenState extends State<MemoryVaultScreen> {
                       ),
                     ),
 
-                    // ── Icon ───────────────────────────────────────────────
+                    // ── Title ──────────────────────────────────────────────
                     const SizedBox(height: 8),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/my_shield_features/my_photos.png',
-                        width: 120,
-                        height: 120,
-                        fit: BoxFit.cover,
-                        filterQuality: FilterQuality.high,
+                    const Text(
+                      'MY PHOTOS',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2,
                       ),
                     ),
                     const SizedBox(height: 24),

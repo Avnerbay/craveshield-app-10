@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white">
+  <!-- head -->
+  <circle cx="50" cy="18" r="9"/>
+  <!-- body sitting -->
+  <ellipse cx="50" cy="55" rx="22" ry="10"/>
+  <!-- legs crossed -->
+  <path d="M28 55 Q20 70 35 72 Q50 65 65 72 Q80 70 72 55"/>
+  <!-- arms up/out -->
+  <path d="M30 45 Q18 35 22 25" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M70 45 Q82 35 78 25" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- torso -->
+  <rect x="45" y="27" width="10" height="28" rx="5"/>
+  <!-- breath lines -->
+  <path d="M15 50 Q20 44 25 50 Q30 56 35 50" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M65 50 Q70 44 75 50 Q80 56 85 50" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- bells -->
+  <circle cx="25" cy="28" r="10" fill="white"/>
+  <circle cx="75" cy="28" r="10" fill="white"/>
+  <!-- clock body -->
+  <circle cx="50" cy="58" r="34" fill="white"/>
+  <circle cx="50" cy="58" r="28" fill="#0a2a5e"/>
+  <!-- clock hands -->
+  <line x1="50" y1="58" x2="50" y2="36" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="58" x2="66" y2="66" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="50" cy="58" r="3" fill="white"/>
+  <!-- feet -->
+  <rect x="30" y="88" width="12" height="7" rx="3" fill="white"/>
+  <rect x="58" y="88" width="12" height="7" rx="3" fill="white"/>
+</svg>

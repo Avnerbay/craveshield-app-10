@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'craveshield/screens/my_shield_screen.dart';
+import 'craveshield/screens/panic_button.dart';
 
 /// Public name for the "What are you quitting today" screen.
 class WhatAreYouQuittingScreen extends StatefulWidget {
@@ -86,13 +87,13 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                     alignment: Alignment.topCenter,
                     children: [
                       Positioned(
-                        top: 20,
+                        top: 70,
                         left: 0,
                         right: 0,
                         child: Center(
                           child: SizedBox(
-                            width: 260,
-                            height: 150,
+                            width: 240,
+                            height: 115,
                             child: Stack(
                               clipBehavior: Clip.none,
                               children: [
@@ -119,16 +120,37 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                                     },
                                     child: SvgPicture.asset(
                                       'assets/images/craveshield_logo.svg',
-                                      width: 135,
-                                      height: 135,
+                                      width: 105,
+                                      height: 105,
                                       fit: BoxFit.contain,
                                     ),
                                   ),
                                 ),
                                 Positioned(
-                                  right: -15,
-                                  top: 60,
-                                  child: GestureDetector(
+                                  right: -30,
+                                  top: 44,
+						child: AnimatedBuilder(
+							animation: _idleCurve,
+							builder: (context, child) {
+								final pulse = 0.93 + 0.07 * _idleCurve.value;
+								return Transform.scale(
+									scale: pulse,
+									child: Container(
+										decoration: BoxDecoration(
+											shape: BoxShape.circle,
+											boxShadow: [
+												BoxShadow(
+													color: Color(0xFFFF2200).withValues(alpha: 0.45 + 0.35 * _idleCurve.value),
+													blurRadius: 16 + 16 * _idleCurve.value,
+													spreadRadius: 2 + 5 * _idleCurve.value,
+												),
+											],
+										),
+									child: child,
+								),
+								);
+							},
+							child: GestureDetector(
                                     behavior: HitTestBehavior.translucent,
                                     onTap: () {
                                       Navigator.push(
@@ -141,14 +163,15 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                                     },
                                     child: Image.asset(
                                       'assets/images/my_shield_features/craveshield_logo_primary.png',
-                                      width: 78,
-                                      height: 78,
+                                      width: 80,
+                                      height: 80,
                                       fit: BoxFit.contain,
                                       filterQuality: FilterQuality.high,
                                       isAntiAlias: true,
                                     ),
                                   ),
                                 ),
+							),
                               ],
                             ),
                           ),
@@ -159,40 +182,46 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                 ),
               ),
               const Positioned(
-                top: 198,
+                top: 200,
+                left: 20,
+                right: 20,
+                child: PanicButton(),
+              ),
+              const Positioned(
+                top: 264,
                 left: 22,
                 right: 22,
                 child: Text(
-                  'What are you quitting\ntoday?',
+                  'Stay Free.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 34,
+                    fontSize: 28,
                     height: 1.05,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
               ),
               const Positioned(
-                top: 278,
+                top: 332,
                 left: 20,
                 right: 20,
                 child: Text(
-                  'Select one to personalize your journey',
+                  'Choose what you\'re staying free from:',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 17,
+                    fontSize: 14,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
               Positioned(
-                top: 335,
+                top: 364,
                 left: 0,
                 right: 0,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(28, 18, 28, 88),
+                  padding: const EdgeInsets.fromLTRB(24, 8, 24, 80),
                   child: Column(
                     children: [
                       PremiumQuitCard(
@@ -202,7 +231,7 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                         colors: const [Color(0xFFFF4A00), Color(0xFFFF0000)],
                         glowColor: const Color(0xFFFF3B30),
                       ),
-                      const SizedBox(height: 14),
+                      const SizedBox(height: 10),
                       PremiumQuitCard(
                         idlePulseAnimation: _idleCurve,
                         title: 'Alcohol',
@@ -210,7 +239,7 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                         colors: const [Color(0xFFFFB000), Color(0xFFFF6A00)],
                         glowColor: const Color(0xFFFF9500),
                       ),
-                      const SizedBox(height: 14),
+                      const SizedBox(height: 10),
                       PremiumQuitCard(
                         idlePulseAnimation: _idleCurve,
                         title: 'Sugar/Carbs',
@@ -218,7 +247,7 @@ class _WhatAreYouQuittingScreenState extends State<WhatAreYouQuittingScreen>
                         colors: const [Color(0xFFFFD400), Color(0xFFF09000)],
                         glowColor: const Color(0xFFFFCC00),
                       ),
-                      const SizedBox(height: 14),
+                      const SizedBox(height: 10),
                       PremiumQuitCard(
                         idlePulseAnimation: _idleCurve,
                         title: 'Cannabis',
@@ -361,10 +390,10 @@ class _PremiumQuitCardState extends State<PremiumQuitCard> {
             duration: const Duration(milliseconds: 240),
             curve: Curves.easeInOut,
             width: 330,
-            height: 92,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(28),
-              boxShadow: [
+          height: 76,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(24),
+            boxShadow: [
                 BoxShadow(
                   color: widget.glowColor.withValues(
                     alpha: _hovered ? 0.85 : 0.35,
@@ -375,16 +404,16 @@ class _PremiumQuitCardState extends State<PremiumQuitCard> {
                 ),
               ],
             ),
-            child: Container(
+              child: Container(
               width: 330,
-              height: 92,
+              height: 76,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: widget.colors,
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
-                borderRadius: BorderRadius.circular(28),
+                borderRadius: BorderRadius.circular(24),
                 border: Border.all(
                   color: Colors.white.withValues(alpha: 0.22),
                   width: 1.2,
@@ -426,3 +455,5 @@ class _PremiumQuitCardState extends State<PremiumQuitCard> {
     );
   }
 }
+
+

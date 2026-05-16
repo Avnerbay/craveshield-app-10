@@ -12,8 +12,15 @@ import 'craveshield/screens/login_screen.dart';
 import 'craveshield/screens/my_breathing_screen.dart';
 import 'craveshield/screens/memory_vault_screen.dart';
 import 'craveshield/screens/my_games_screen.dart';
+import 'craveshield/screens/my_music_screen.dart';
 import 'craveshield/screens/my_shield_screen.dart';
+import 'craveshield/screens/my_quotes_screen.dart';
+import 'craveshield/screens/my_sounds_screen.dart';
+import 'craveshield/screens/my_short_break_screen.dart';
+import 'craveshield/screens/quick_shield_screen.dart';
+import 'craveshield/screens/my_support_screen.dart';
 import 'craveshield/screens/register_screen.dart';
+import 'craveshield/screens/settings_screen.dart';
 import 'craveshield/screens/splash_screen.dart';
 import 'craveshield/theme/craveshield_colors.dart';
 import 'quit_selection_screen.dart';
@@ -81,7 +88,7 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: CraveShieldColors.navy,
         fontFamily: 'Inter',
       ),
-      home: const QuitSelectionScreen(),
+     home: const QuitSelectionScreen(),
       routes: {
         CraveSplashScreen.routePath: (context) => const CraveSplashScreen(),
         CraveDisclaimerScreen.routePath: (context) =>
@@ -92,7 +99,14 @@ class _MyAppState extends State<MyApp> {
         MyShieldScreen.routePath: (context) => const MyShieldScreen(),
         MyBreathingScreen.routePath: (context) => const MyBreathingScreen(),
         MyGamesScreen.routePath: (context) => const MyGamesScreen(),
+        MyMusicScreen.routePath: (context) => const MyMusicScreen(),
+        MyQuotesScreen.routePath: (context) => const MyQuotesScreen(),
+        MySoundsScreen.routePath: (context) => const MySoundsScreen(),
+        MyShortBreakScreen.routePath: (context) => const MyShortBreakScreen(),
+        MySupportScreen.routePath: (context) => const MySupportScreen(),
         MemoryVaultScreen.routePath: (context) => const MemoryVaultScreen(),
+        SettingsScreen.routePath: (context) => const SettingsScreen(),
+        QuickShieldScreen.routePath: (context) => const QuickShieldScreen(),
         '/crave-select-addiction': (context) => const QuitSelectionScreen(),
         CraveDashboardPlaceholderScreen.routePath: (context) =>
             const CraveDashboardPlaceholderScreen(),
